@@ -30,10 +30,11 @@ ALLOWED_HOSTS = []
 if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
 
-
+API_KEY = os.environ.get('MOVIEDB_API_KEY')
 # Application definition
 
 INSTALLED_APPS = [
+    'films',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
