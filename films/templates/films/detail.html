@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{{ title }}</h1>
+<p>{{ release_date }}</p>
+<h2>{{ overview }}</h2>
+<h3>Director: {{ director }}</h3>
+<h3>Written by: {{ screenplay }}</h3>
+<h3>Director of photography: {{ dop }}</h3>
+<h3>Cast:</h3>
+<ul>
+    {% for x in cast %}
+        <li>{{ x }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
